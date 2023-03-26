@@ -36,11 +36,12 @@ top_dir=$HOME'/path/to/Atelectasi.export.tsv'
 
 bash run_keys_db.sh step1 step2 step3 step4 step5 
 
-##To generate COCO dataset format for image segmentation. 
+##To generate COCO dataset format for image segmentation (pay attention to the path). 
 
 python generate_coordinate.py  
 
-##To get image size
+##To get image size (pay attention to the path)
+
 python generate_coordinate.py 
 
 ##Subfigure sepearation
