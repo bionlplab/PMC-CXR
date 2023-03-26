@@ -59,11 +59,14 @@ bash run_keys_db.sh step7 step8 step9
 python classifier_second.py
 
 ##Produce a CSV file for Radtex, which will be used to verify CXR pathology
+
 python create_csv.py
 
 ##CXR pathology verification
 
-Please follow the Process.doc to generate result for CXR pathology verification
+Please follow the Process.doc to generate result for CXR pathology verification.
+
+We will maintain and update the RadText software (https://github.com/bionlplab/radtext).
 
 ## Get the PMC data
 
