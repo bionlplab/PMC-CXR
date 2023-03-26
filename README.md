@@ -2,7 +2,11 @@
 
 ## Download code
 
-Go to this website to download the related code https://github.com/yfpeng/PMCFigureX
+Go to this website to download the related code to get figure from PubMed https://github.com/yfpeng/PMCFigureX
+
+Go to this website to download the code for subfigure separation https://github.com/hrlblab/ImageSeperation
+
+
 
 
 ## Prepare source file
@@ -36,6 +40,37 @@ bash run_keys_db.sh step1 step2 step3 step4 step5
 
 python generate_coordinate.py  
 
-##
+##To get image size
+python generate_coordinate.py 
+
+##Subfigure sepearation
+python detect.py --weights /prj0129/mil4012/glaucoma/Figure_segmentation/runs/train/exp6/weights/best.pt --source /prj0129/mil4012/glaucoma/Figure_segmentation/Pneumonia/images/test --hide-labels --hide-conf --save-txt --save-conf
+
+##Get the json file
+
+python save_jsonnew.py 
+
+##Get Get local figures/subfigures, Classify subfigures, and Get text
+
+bash run_keys_db.sh step7 step8 step9
+
+##Get the second classification result for figure 
+
+python classifier_second.py
+
+##Produce a CSV file for Radtex, which will be used to verify CXR pathology
+python create_csv.py
+
+##CXR pathology verification
+
+Please follow the Process.doc to generate result for CXR pathology verification
+
+## Get the PMC data
+
+In this study, we created the PMC-CXR based on the following three criteria: (1) the caption contains a positive mention of the disease (CXR pathology verification), (2) the figure/subfigure is a chest x-ray (CXR) (two classifiers identify the image is  a chest x-ray), and (3) the subfigure has a width-to-height or height-to-width ratio greater than 0.5.
+
+
+
+
 
 
