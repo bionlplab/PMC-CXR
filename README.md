@@ -66,6 +66,8 @@ python create_csv.py
 
 Please follow the Process.doc to generate result for CXR pathology verification.
 
+The code is in radtext document.
+
 We will maintain and update the RadText software (https://github.com/bionlplab/radtext).
 
 ## Get the PMC data
