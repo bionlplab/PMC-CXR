@@ -76,7 +76,9 @@ We will maintain and update the RadText software (https://github.com/bionlplab/r
 In this study, we created the PMC-CXR based on the following three criteria: (1) the caption contains a positive mention of the disease (CXR pathology verification), (2) the figure/subfigure is a chest x-ray (CXR) (two classifiers identify the image is  a chest x-ray), and (3) the subfigure has a width-to-height or height-to-width ratio greater than 0.5.
 
 
+## An example that the model trained on NIH + MIMIC-CXR POSITIVE  + PMC-CXR
 
+python train_add_sample_total.py
 
 
 
